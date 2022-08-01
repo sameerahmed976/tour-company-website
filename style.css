@@ -311,6 +311,55 @@ header {
   border-radius: 1rem;
 }
 
+/* services */
+
+.service-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: 1fr;
+  row-gap: 1rem;
+  column-gap: 2rem;
+}
+
+.service-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.6fr 1fr;
+  box-shadow: var(--box-shadow-1);
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+}
+.service-image-container {
+  background-color: var(--secondary-color);
+  display: block;
+  padding: 1rem;
+  align-self: center;
+  justify-self: center;
+  border-radius: 0.5rem;
+}
+.service-image-container i {
+  font-size: var(--font-size-s-h1);
+  text-align: center;
+  color: white;
+}
+.service-content h5 {
+  padding: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: var(--font-size-s-h4);
+  letter-spacing: 2px;
+  color: white;
+}
+
+.service-content p {
+  color: white;
+  margin: 1rem;
+  text-align: center;
+  letter-spacing: 2px;
+  padding-bottom: 0.1rem;
+}
+
 @media only screen and (min-width: 700px) {
   .hamburger {
     display: none;
