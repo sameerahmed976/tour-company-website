@@ -471,6 +471,28 @@ header {
   font-size: var(--font-size-s-h6);
 }
 
+/* gallery */
+
+.gallery-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: 1fr;
+}
+
+.gallery-image-container {
+  position: relative;
+}
+
+.gallery-image-container i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: green;
+  opacity: 0;
+  font-size: var(--font-size-s-h3);
+}
+
 @media only screen and (min-width: 700px) {
   .hamburger {
     display: none;
