@@ -99,10 +99,6 @@ p {
   max-width: 1170px;
 }
 
-.section {
-  margin: 2rem 0;
-}
-
 /* 
 ================
 navbar
@@ -125,6 +121,7 @@ header {
   align-items: center;
   position: relative;
   overflow: hidden;
+  z-index: 2;
 }
 
 .logo {
@@ -205,6 +202,11 @@ header {
   display: none;
 }
 
+.section {
+  background-color: var(--background-color);
+  margin-top: 1rem;
+}
+
 .section-main {
   min-height: calc(100vh - 4rem);
   background-color: #358fa3;
@@ -235,12 +237,12 @@ header {
   letter-spacing: 2px;
   text-transform: capitalize;
   font-weight: bold;
-  color: var(--primary-color);
   background-color: var(--background-color);
   border: transparent;
   box-shadow: var(--box-shadow-1);
   transition: var(--transition-8);
   font-family: var(--heading-font);
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -258,6 +260,9 @@ header {
   transition: var(--transition-8);
   margin-top: 2rem;
   cursor: pointer;
+  font-size: var(--font-size-s-h5);
+  text-align: center;
+  padding: 0.5rem 1rem;
 }
 .btn-explore:hover {
   transform: translateY(15%);
@@ -270,9 +275,15 @@ header {
 .title {
   text-transform: capitalize;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0.1rem;
   font-family: var(--heading-font);
   /* background-color: var(--background-color); */
+}
+
+.title h1 {
+  font-size: var(--font-size-s-h2);
+  text-decoration: underline;
+  text-decoration-color: #001cda;
 }
 
 .title span {
@@ -288,11 +299,11 @@ header {
 }
 
 .about-content h3 {
-  font-size: var(--font-size-s-h4);
+  font-size: var(--font-size-s-h5);
   text-transform: capitalize;
   padding-left: 1rem;
   margin-bottom: 0.5rem;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .about-center p {
@@ -312,11 +323,12 @@ header {
 }
 
 .btn-about {
-  font-size: var(--font-size-s-h5);
+  font-size: var(--font-size-s-h6);
   display: block;
-  width: 60%;
+  width: 50%;
+  padding: 0.8rem 0.5rem;
   margin: 0 auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border-radius: 1rem;
 }
 
@@ -485,6 +497,9 @@ header {
 .btn-submit {
   font-size: var(--font-size-s-h6);
 }
+.btn-submit:hover {
+  transform: translate(0%);
+}
 
 /* gallery */
 
@@ -509,31 +524,21 @@ header {
   opacity: 1;
 }
 
-.gallery-image-container i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: green;
-  opacity: 0;
-  font-size: var(--font-size-s-h3);
-}
-
-.gallery-image-container i:hover {
-  opacity: 1;
-}
-
 .gallery-image {
   height: 12rem;
 }
 
 /* footer */
 footer {
-  text-align: center;
   background-color: var(--secondary-color);
   color: white;
-  padding: 2rem;
+}
+
+footer p {
+  text-align: center;
   text-transform: capitalize;
+  padding: 1rem 0;
+  font-size: 1rem;
 }
 
 @media only screen and (min-width: 700px) {
