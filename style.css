@@ -290,6 +290,7 @@ header {
 .title h1 {
   font-size: var(--font-size-s-h2);
   text-decoration: underline;
+  -webkit-text-decoration-color: #001cda;
   text-decoration-color: #001cda;
 }
 
@@ -326,6 +327,7 @@ header {
 
 .about-image {
   height: 16rem;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -589,7 +591,7 @@ footer p {
     align-items: center;
     gap: 1rem;
     width: 100%;
-    justify-content: end;
+    justify-content: flex-end;
     padding-right: 1rem;
   }
 

@@ -75,16 +75,34 @@ scrollLinks.forEach((link) => {
     e.preventDefault();
     // console.log(e.currentTarget.getAttribute("href").slice(1));
     const id = e.currentTarget.getAttribute("href").slice(1);
-    const containerHeight = linksContainer.getBoundingClientRect().height;
-    const navLinksHeight = navLinks.getBoundingClientRect().height;
+    // const containerHeight = linksContainer.getBoundingClientRect().height;
+    // console.log(
+    //   "🚀 ~ file: main.js ~ line 79 ~ link.addEventListener ~ containerHeight",
+    //   containerHeight
+    // );
+
     linksContainer.style.height = "0";
     hamburgerBtn.classList.add("rotate-minus");
 
     hamburgerBtn.classList.remove("rotate-plus");
     const element = document.getElementById(id);
+    let position = element.offsetTop;
+    // let position = element.offsetTop - containerHeight;
+    // console.log(
+    //   "🚀 ~ file: main.js ~ line 87 ~ link.addEventListener ~ position",
+    //   position
+    // );
 
-    const position = element.offsetTop;
-    // console.log(position);
+    if (!navLinks.classList.contains("fixed-nav")) {
+      // position = position - navLinksHeight - containerHeight;
+      position = position - 200;
+      // position = position;
+      console.log(
+        "🚀 ~ file: main.js ~ line 101 ~ link.addEventListener ~ position",
+        position
+      );
+    }
+    position = position + 120;
 
     window.scrollTo({
       left: 0,
