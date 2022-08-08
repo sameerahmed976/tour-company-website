@@ -32,21 +32,23 @@
     <title>Tour Company</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
+    <header id="home" class="header">
+      <nav class="navbar" id="nav">
         <div class="navbar-small">
           <h5 class="logo">Tour <span>Company</span></h5>
           <div class="hamburger">
             <i class="fa-solid fa-bars"></i>
           </div>
         </div>
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Featured</a></li>
-          <li><a href="#">Gallery</a></li>
-        </ul>
+        <section class="links-container">
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+          </ul>
+        </section>
         <ul class="social-links">
           <li>
             <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -72,12 +74,12 @@
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
             maxime eum voluptatibus?
           </p>
-          <button class="btn btn-explore">Explore Places</button>
+          <a href="#tours" class="btn btn-explore">Explore Places</a>
         </article>
       </section>
       <!-- end of heo section main -->
       <!-- start of about  -->
-      <section class="section">
+      <section class="section" id="about">
         <section class="title">
           <h1>About <span>Us</span></h1>
         </section>
@@ -86,7 +88,7 @@
             <img src="/aboutus.jpg" alt="about" class="about-image" />
           </article>
 
-          <article class="about-content">
+          <article class="about-content" id="about">
             <h3>Explore the Difference</h3>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure
@@ -102,7 +104,7 @@
       </section>
       <!-- end of about  -->
       <!-- start of service -->
-      <section class="section">
+      <section class="section" id="services">
         <section class="title">
           <h1>Our <span>Services</span></h1>
         </section>
@@ -147,7 +149,7 @@
       </section>
       <!-- end of service -->
       <!-- start of featured tours -->
-      <section class="section">
+      <section class="section" id="featured">
         <section class="title">
           <h1>Featured <span>Tours</span></h1>
         </section>
@@ -261,7 +263,7 @@
       </section>
       <!-- end of featured tours -->
       <!-- start of contact  -->
-      <section class="section-contact">
+      <section class="section-contact" id="conatct">
         <article class="contact-content">
           <h2>Want Latest Tour Info And Updates?</h2>
 
@@ -279,7 +281,7 @@
       </section>
       <!-- end of contact  -->
       <!-- start of gallery -->
-      <section>
+      <section id="gallery">
         <section class="gallery-center">
           <article class="gallery-image-container">
             <img
@@ -340,9 +342,16 @@
         </section>
       </section>
       <!-- end of gallery -->
+      <!-- top to link -->
+      <a href="#" class="btn btn-top">Back to Top</a>
+      <!-- top to link -->
+
       <!-- start of footer -->
       <footer>
-        <p>Copyright &copy; Tour company 2022.All right reserved</p>
+        <p>
+          Copyright &copy; Tour company <span id="date"></span> .All right
+          reserved
+        </p>
       </footer>
       <!-- end of footer -->
     </main>
